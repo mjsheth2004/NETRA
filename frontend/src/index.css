@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    --background: 210 40% 98%; /* light gray */
+    --background-panel: 0 0% 100%; /* white */
+    --background-card: 214 32% 91%;
+    --text-primary: 222 47% 11%;
+    --text-secondary: 215 16% 47%;
+    --text-muted: 215 16% 47%;
+    
+    --brand: 165 100% 39%; /* Emerald Teal #00C896 */
+    --brand-hover: 165 100% 33%;
+    
+    --accent-gold: 37 90% 56%; /* Saffron Gold #F4A62A */
+    --accent-red: 0 84% 60%; /* Threat Red #EF4444 */
+    
+    --status-critical: 0 84% 60%;
+    --status-high: 25 95% 53%;
+    --status-medium: 37 90% 56%;
+    --status-low: 217 91% 60%;
+    --status-benign: 165 100% 39%;
+    --ring: 165 100% 39%;
+  }
+
+  .dark {
+    --background: 220 49% 8%; /* Deep Navy #0B1220 */
+    --background-panel: 221 47% 12%; /* #10192C */
+    --background-card: 221 44% 15%; /* #152036 */
+    --text-primary: 210 40% 98%;
+    --text-secondary: 215 20% 65%;
+    --text-muted: 215 16% 47%;
+  }
+
+  body {
+    @apply bg-background text-text-primary antialiased;
+  }
+}
+
+@layer components {
+  /* Cards and Elevated Surfaces */
+  .card {
+    @apply bg-background-panel rounded-lg border border-background-card shadow-lg p-4;
+  }
+}
