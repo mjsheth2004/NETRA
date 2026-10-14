@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* NETRA Design System */
+  --color-bg-deep-navy: #060913; /* Extremely dark background */
+  --color-bg-navy-panel: #0B1220; /* Deep Navy from the guide */
+  
+  --color-emerald-teal: #00C896;
+  --color-soft-teal: #00A982;
+  
+  --color-saffron-gold: #F4A62A;
+  
+  --color-threat-red: #EF4444;
+  --color-critical-red: #B91C1C;
+  
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  
+  --color-border: rgba(148, 163, 184, 0.12);
+  
+  --color-teal-hover: rgba(0, 200, 150, 0.08);
+  --color-teal-glow: rgba(0, 200, 150, 0.18);
+  
+  /* Font Families */
+  --font-ui: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --spacing-mobile: 16px;
+  --spacing-tablet: 24px;
+  --spacing-desktop: 32px;
+
+  /* Layout */
+  --sidebar-expanded: 250px;
+  --sidebar-collapsed: 72px;
+  --navbar-height: 64px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-ui);
+  background-color: var(--color-bg-deep-navy);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Utilities */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-teal {
+  color: var(--color-emerald-teal);
+}
+
+.text-gold {
+  color: var(--color-saffron-gold);
+}
+
+.text-red {
+  color: var(--color-threat-red);
+}
+
+.panel {
+  background-color: var(--color-bg-navy-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+/* Animations & Transitions */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Hide Scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
